@@ -1,0 +1,14 @@
+//gcloud auth list
+//gcloud config list project
+
+// Inicio 
+gcloud config set compute/region us-central1
+export REGION=us-central1
+export ZONE=us-central1-c
+
+sudo apt-get update
+sudo apt-get install -y nginx
+gcloud compute instances create gcelab2 --machine-type e2-medium --zone=$ZONE
+gcloud compute instances create --help
+gcloud compute ssh gcelab2 --zone=us-central1-c
+exit
